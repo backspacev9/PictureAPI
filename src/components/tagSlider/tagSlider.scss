@@ -1,0 +1,48 @@
+.tagSlider {
+  * {
+    display: flex;
+  }
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  margin-top: 20px;
+
+  .slidesContainer {
+    gap: 10px;
+    align-items: center;
+    justify-content: start;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    user-select: none;
+
+    .slide {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 50px;
+      padding: 0 10px;
+      text-wrap: nowrap;
+      border: 1px solid #979797;
+      border-radius: 4px;
+      font-size: 18px;
+    }
+    .slide:hover {
+      background-color: #f5d481;
+    }
+  }
+  .btn-left,
+  .btn-right,
+  .slide {
+    cursor: pointer;
+  }
+  .btn-left {
+    margin-right: 10px;
+  }
+  .btn-right {
+    margin-left: 10px;
+    transform: rotate(180deg);
+  }
+}

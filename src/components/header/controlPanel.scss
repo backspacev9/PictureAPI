@@ -1,0 +1,111 @@
+.controlContainer {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  user-select: none;
+  .btnController {
+    display: none;
+    flex-direction: row;
+    height: 30px;
+    .btnPage {
+      width: 40px;
+      border: 1px solid #ec6666;
+      transition: all 0.4s;
+      cursor: pointer;
+    }
+    .btnPage:hover {
+      color: #fff;
+      background-color: #ec6666;
+    }
+
+    .prev {
+      border-radius: 123px 0 0 123px;
+      margin-right: 5px;
+    }
+    .next {
+      border-radius: 0 123px 123px 0;
+      margin-left: 5px;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+  }
+
+  ///------itemsPerPage------
+  .itemsPerPage {
+    display: none;
+    margin-top: 10px;
+    span {
+      width: max-content;
+    }
+    input {
+      width: 5ch;
+      margin-left: 4px;
+    }
+  }
+  ////------Status-Bar-------
+  .pagination {
+    display: none;
+    height: 100%;
+    margin-top: 10px;
+    span {
+      padding: 0 3px;
+    }
+    .pages {
+      display: flex;
+
+      li {
+        list-style: none;
+        display: flex;
+        cursor: pointer;
+      }
+      li:nth-child(n + 2) {
+        margin-left: 5px;
+      }
+
+      li:hover {
+        text-decoration: underline !important;
+      }
+      .active {
+        text-decoration: underline;
+      }
+    }
+    .totalPage {
+      cursor: pointer;
+    }
+    .totalPage:hover {
+      text-decoration: underline !important;
+    }
+  }
+
+  //-------Sorting-------------
+  .sortingCotainer {
+    display: flex;
+    gap: 10px;
+
+    .sel {
+      color: #fdfdfd;
+    }
+    select {
+      border-radius: 5px;
+
+      outline: none;
+      border: 2px solid #979797;
+      width: 200px;
+      font-size: 18px;
+      padding: 10px;
+      option {
+      }
+    }
+
+    .colorSelect {
+      option:nth-child(2) {
+        color: #ffffff;
+      }
+    }
+  }
+}
